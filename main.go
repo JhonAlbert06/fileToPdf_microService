@@ -17,6 +17,7 @@ func main() {
 
 	r.POST("/convertFileToPdf", controllers.ConvertFileToPdf)
 	r.GET("/getFile/:fileName", controllers.GetFile)
+	r.POST("/convertFile", controllers.ConvertAndReturnFile)
 
 	// The port 3000 has been set in the .env file
 	err := r.Run(":3000")
